@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color:aqua;
+}
+
+header{
+  background-color: aliceblue;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  border-bottom: 1px solid #000;
+  box-shadow: 10px 10px 10px #100;
+}
+
+nav{
+  display: flex;
+  justify-content: end;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.ancla{
+  background-color: #000;
+  color: #fff;
+  width: 100px;
+  height: 30px;
+  border:  2px #fff solid;
+  border-radius: 10px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.img{
+  width: 3rem;
+  height: 50px;
+  border-radius: 10px;
+  margin: 10px;
+}
