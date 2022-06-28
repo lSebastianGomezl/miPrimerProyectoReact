@@ -65,6 +65,8 @@ main{
   text-align: justify;
   width: 500px;
   margin: 20px;
+  font-size: 20px;
+  line-height: 45px;
 }
 .contenedor1{
   justify-content: center;
