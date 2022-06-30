@@ -1,23 +1,38 @@
-import React from 'react'
-import { LogoTipo } from '../../UI/LogoTipo/LogoTipo'
-import { Parrafo } from '../../UI/Parrafo/Parrafo'
-import { Titulo } from '../../UI/Titulo/Titulo'
-import  logotipomain  from '../../../images/React_Native_Logo.png';
+import React, {useState} from 'react'
+
 
 export const Main = () => {
+
+  const [contadorValue, actualizarContador] = useState(0);
+  const [text, setText]= useState("");
+
+  const update = (event)=>{
+    setText(event.target.value);
+  }
+  
+
+  const sum = ()=>{
+    actualizarContador(contadorValue + 1);
+  }
+
+  const res = ()=>{
+    actualizarContador(contadorValue - 1);
+  }
+
+  const reset = ()=>{
+    actualizarContador(0);
+  }
+
   return (
     <main>
         <div className='contenedor1'>
-            <Titulo style="title2" textTitulo="Mi Primera Pagina en React"/>
-            <Parrafo estilo="parrafo1" textParrafo="Lorem ipsum dolor sit 
-            amet consectetur adipisicing elit. Consequatur aspernatur asperiores
-            voluptatibus eaque quidem cumque. Ratione voluptate libero et quis,
-            aspernatur sint velit laborum, aliquam, nam delectus ullam quibusdam 
-            eosipsum dolor sit amet consectetur adipisicing elit. Consequatur aspernatur 
-            asperiores voluptatibus eaque quidem cumque. Ratione voluptate libero et quis,
-            aspernatur sint velit laborum, aliquam, nam delectus ullam quibusdam eos."/>
+          <input onChange={update}></input>
+          <h1>{text}</h1>
+          <h1>{contadorValue}</h1>
+          <button id='btnOne' className='optbBtn' onClick={sum}>Añadir</button>
+          <button id='btnTwo' className='optbBtn1' onClick={res}>Decrementar</button>
+          <button id='btnThree' className='optbBtn2' onClick={reset}>Resetear</button>
         </div>
-        <LogoTipo recurso={logotipomain} estilo="img2"/>
     </main>
   )
 }

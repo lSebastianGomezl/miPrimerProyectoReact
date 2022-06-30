@@ -70,4 +70,21 @@ main{
 }
 .contenedor1{
   justify-content: center;
+  margin-top: 300px;
+}
+
+.optbBtn{
+  margin-right: 20px;
+  border-radius: 10px;
+  background-color: green;
+}
+.optbBtn1{
+  margin-right: 20px;
+  border-radius: 10px;
+  background-color: red;
+}
+.optbBtn2{
+  margin-right: 20px;
+  border-radius: 10px;
+  background-color: blue;
 }
